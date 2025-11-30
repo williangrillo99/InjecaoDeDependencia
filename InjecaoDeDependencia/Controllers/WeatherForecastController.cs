@@ -47,14 +47,23 @@ public class WeatherForecastController(IServiceProvider provider) : ControllerBa
         
         return Ok(new
         {
-            Scoped = scoped.Contador,
-            Scoped2 = scoped2.Contador,
+            Transient1Count = transient.Contador,
+            Transient1Id= transient.Id,
+            
+            Transient2Count = transient2.Contador,
+            Transient2Id= transient2.Id,
+            
+            Scoped1Count = scoped.Contador,
+            Scoped1Id = scoped.Id,
 
-            Transient = transient.Contador,
-            Transient2 = transient.Contador,
-
-            Singleton = singleton.Contador,
-            Singleton2 = singleton.Contador,
+            Scoped2Count = scoped2.Contador,
+            Scoped2Id = scoped2.Id, 
+            
+            Singleton1Count = singleton.Contador,
+            Singleton1Id = singleton.Id,
+            
+            Singleton2Count = singleton2.Contador,
+            Singleton2Id = singleton2.Id,
 
         });
     }
